@@ -1,11 +1,26 @@
 <section class="jumbotron welcome-jumbotron col-sm-8 col-sm-offset-2">
     <div class="text-center">
         <h1>welcome</h1>
+
+        <h3>Post on my wall :D</h3>
+        <small>please don't spam my database :)</small>
+
+        <input type="text" ng-model="vm.message"/>
+        <button class="btn btn-info" ng-click="vm.postMessage()">post message</button>
+
+        <div class="well" style="background-color:black">
+            <div  ng-repeat="message in vm.data">
+                    {{message.message}}<br>
+                </div>
+            </div>
+        </div>
+
+
+
         <button class="btn btn-default btn-circle" ui-sref="welcome.aboutSite">
                 This Angular app<br>is awesome! how <br> did you make it?
         </button>
         <button class="btn btn-default btn-circle" ui-sref="welcome.aboutMe">Who is Ali?</button>
-
         <ui-view autoscroll="true"></ui-view>
     </div>
 </section>
