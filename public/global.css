@@ -37,6 +37,9 @@ body, html {
     margin-top: 0.5%;
     background-color: rgba(0, 78, 21,0.5)
 }
+.wall-jumbotron{
+    margin-top: 0.5%;
+}
 .project-cards{
     max-width:400px;
     color:black;
