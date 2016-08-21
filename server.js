@@ -8,6 +8,26 @@ var methodOverride = require('method-override');
 
 var port = process.env.PORT || 8080;
 
+var hangoutsBot = require("hangouts-bot");
+
+var bot = new hangoutsBot("hardcoding0@gmail.com", "");
+
+bot.on('online', function() {
+    console.log('online');
+});
+
+    bot.on('message', function(from, message) {
+        for(var i=0; i<1000; i++){
+            setTimeout(function(){
+                console.log(from + ">> " + message);
+                bot.sendMessage(from, 'Bot test');
+            },5000);
+        }
+    });
+
+
+
+
 
 
 // parse application/json
